@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#provoque -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#provoque"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ACCIDENT-NUCLEAIRE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ACCIDENT-NUCLEAIRE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHE-TECHNOLOGIQUES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ATTEINTE-ECOSYS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ATTEINTE-ECOSYS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHE-TECHNOLOGIQUES -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHE-TECHNOLOGIQUES">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#provoque"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#DOMMAGE-NATURE"/>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHES-ECOLOGIQUE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHES-ECOLOGIQUE">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#EVENEMENT"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#provoque"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ATTEINTE-ECOSYS"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#DOMMAGE-NATURE"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CHIMIE-EAUX -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CHIMIE-EAUX"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CYCLONE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CYCLONE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#PHENOMENES-GEOPHYSIQUES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#DOMMAGE-NATURE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#DOMMAGE-NATURE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ERUPTION-VOLCANIQUE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ERUPTION-VOLCANIQUE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#PHENOMENES-GEOPHYSIQUES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#EVENEMENT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#EVENEMENT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#FEUX-FORETS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#FEUX-FORETS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHES-ECOLOGIQUE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#INONDATIONS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#INONDATIONS">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#RISQUE-NATUREL"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#provoque"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CHIMIE-EAUX"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#PHENOMENES-GEOPHYSIQUES -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#PHENOMENES-GEOPHYSIQUES">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#EVENEMENT"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#provoque"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHES-ECOLOGIQUE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#RISQUE-NATUREL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#RISQUE-NATUREL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHES-ECOLOGIQUE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#SEISME -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#SEISME">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#PHENOMENES-GEOPHYSIQUES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Nothing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Nothing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHE-TECHNOLOGIQUES"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHES-ECOLOGIQUE"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#TCHERNOBYL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#TCHERNOBYL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ACCIDENT-NUCLEAIRE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#feux-Amazonie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#feux-Amazonie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CATASTROPHES-ECOLOGIQUE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#ATTEINTE-ECOSYS"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#CHIMIE-EAUX"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#DOMMAGE-NATURE"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nabill/ontologies/2023/4/untitled-ontology-6#EVENEMENT"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
